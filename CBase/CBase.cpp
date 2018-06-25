@@ -15,7 +15,7 @@ public:
 class CDervid :public CBase
 {
 public:
-	void display()
+	void display()//两个一样的display函数，但不是函数的重载，函数的重载需要参数不一样，而这叫函数的覆盖
 	{
 		cout << "派生类" << endl;
 	}
@@ -23,10 +23,14 @@ public:
 
 int main()
 {
+	CBase *p;
+	CDervid *q;
 	CBase obj1;
-	obj1.display();
 	CDervid obj2;
-	obj2.display();
+	p = &obj1;
+	q = &obj2;
+	p->display();
+	q->display();
     return 0;
 }
 
