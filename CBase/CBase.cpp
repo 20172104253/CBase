@@ -7,7 +7,8 @@ using namespace std;
 class CBase
 {
 public:
-	 void display()
+	virtual void test() = 0;//纯虚函数
+	virtual void display()
 	{
 		cout << "基类" << endl;
 	}
@@ -15,6 +16,10 @@ public:
 class CDervid :public CBase
 {
 public:
+	void test()
+	{
+
+	}
 	void display()//两个一样的display函数，但不是函数的重载，函数的重载需要参数不一样，而这叫函数的覆盖
 	{
 		cout << "派生类" << endl;
