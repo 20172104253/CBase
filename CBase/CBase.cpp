@@ -7,7 +7,7 @@ using namespace std;
 class CBase
 {
 public:
-	void display()
+	 void display()
 	{
 		cout << "»ùÀà" << endl;
 	}
@@ -24,13 +24,9 @@ public:
 int main()
 {
 	CBase *p;
-	CDervid *q;
-	CBase obj1;
 	CDervid obj2;
-	p = &obj1;
-	q = &obj2;
+	p = &obj2;
 	p->display();
-	q->display();
     return 0;
 }
 
